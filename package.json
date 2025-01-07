@@ -2,6 +2,7 @@
   "name": "natours",
   "version": "1.0.0",
   "main": "app.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "targets": {
     "main": false
   },
