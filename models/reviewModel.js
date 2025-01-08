@@ -1,4 +1,4 @@
-const mongoose = require('../node_modules/mongoose');
+const mongoose = require('mongoose');
 const Tour = require('./tourModel');
 
 const reviewSchema = new mongoose.Schema(

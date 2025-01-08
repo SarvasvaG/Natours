@@ -1,11 +1,10 @@
 const { promisify } = require('util');
+const jwt = require('jsonwebtoken');
 
 const Booking = require('../models/bookingModel');
 const User = require('../models/userModel');
 const Tour = require('../models/tourModel');
 const catchAsync = require('../utils/catchAsync');
-
-const jwt = require('../node_modules/jsonwebtoken');
 const AppError = require('../utils/appError');
 
 exports.getOverview = catchAsync(async (req, res, next) => {

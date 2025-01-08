@@ -9,7 +9,7 @@ process.on('uncaughtException', (err) => {
 });
 
 // console.log('Environment: ', process.env.NODE_ENV);
-const mongoose = require('./node_modules/mongoose');
+const mongoose = require('mongoose');
 const app = require('./app');
 
 const DB = process.env.DATABASE.replace(
@@ -37,5 +37,12 @@ process.on('unhandledRejection', (err) => {
   console.error(err.name, err.message);
   server.close(() => {
     process.exit(1);
+  });
+});
+
+process.on('SIGTERM', () => {
+  console.log('👋 SIGTERM RECEIVED. Shutting down gracefully!');
+  server.close(() => {
+    console.log('Process terminated!');
   });
 });

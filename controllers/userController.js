@@ -1,9 +1,10 @@
+const multer = require('multer');
+const sharp = require('sharp');
+
 const AppError = require('../utils/appError');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
-const multer = require('../node_modules/multer');
-const sharp = require('../node_modules/sharp');
 
 // const multerStorage = multer.diskStorage({
 //   destination: (req, file, cb) => {

@@ -1,6 +1,6 @@
-const nodemailer = require('../node_modules/nodemailer');
-const pug = require('../node_modules/pug');
-const { convert } = require('../node_modules/html-to-text');
+const nodemailer = require('nodemailer');
+const pug = require('pug');
+const { convert } = require('html-to-text');
 
 module.exports = class Email {
   constructor(user, url) {
